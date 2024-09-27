@@ -15,18 +15,25 @@ h1 {
 }
 
 .snowflake {
-    position: fixed;
-    top: -50px;
+    position: absolute;
+    top: -10px;
     color: white;
-    user-select: none;
-    z-index: 9999;
+    font-size: 20px;
+    opacity: 0.8;
+    animation: fall linear infinite;
 }
 
 @keyframes fall {
-    to { transform: translateY(100vh); }
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
 @keyframes sway {
-    0%, 100% { transform: translateX(0); }
+    0% { transform: translateX(0); }
     50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
 }
