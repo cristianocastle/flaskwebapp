@@ -1,14 +1,26 @@
-function newSnowflake() {
+function createSnowflake() {
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
-    snowflake.innerHTML = '&#10052;'; // Unicode for snowflake character
+    snowflake.textContent = '❄';
     snowflake.style.left = Math.random() * window.innerWidth + 'px';
-    snowflake.style.animationDuration = Math.random() * 10 + 10 + 's'; // Slower fall
-    snowflake.style.opacity = Math.random();
+    snowflake.style.fontSize = Math.random() * 20 + 10 + 'px';
+
     document.body.appendChild(snowflake);
-    setTimeout(() => {
-        snowflake.remove();
-    }, 20000); // Adjusted timeout to match slower fall
+
+    // Animate the snowflake
+    let duration = Math.random() * 5 + 2;
+    let endTop = window.innerHeight;
+    let sway = Math.random() * 100 - 50;
+
+    let animation = snowflake.animate([
+        { transform: `translateX(0px)`, top: '-50px', opacity: 1 },
+        { transform: `translateX(${sway}px)`, top: `${endTop}px`, opacity: 0 }
+    ], {
+        duration: duration * 1000,
+        easing: 'linear'
+    });
+
+    animation.onfinish = () => snowflake.remove();
 }
 
-setInterval(newSnowflake, 100);
+setInterval(createSnowflake, 100);
