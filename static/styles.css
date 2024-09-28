@@ -42,11 +42,11 @@ h1 {
 }
 
 .github-icon {
-    width: 20px;
-    height: 20px;
+    width: 20px; 
+    height: 20px; 
     margin-right: 8px; 
     transition: transform 0.3s ease;
-    object-fit: contain;
+    object-fit: contain; 
 }
 
 .github-link a:hover .github-icon {
