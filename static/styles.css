@@ -9,6 +9,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    text-align: center;
 }
 
 h1 {
@@ -33,6 +34,7 @@ h1 {
     text-decoration: none; 
     display: flex;
     align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
