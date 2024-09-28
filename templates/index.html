@@ -11,7 +11,13 @@
 <body>
     <div class="content">
         <h1>cristiano padilla castillo</h1>
-        <p><a href="https://github.com/cristianocastle" target="_blank">github</a></p>
+        <p class="caption">studying computer science at long beach state</p>
+        <p class="github-link">
+            <a href="https://github.com/cristianocastle" target="_blank">
+                <img src="{{ url_for('static', filename='github-icon.png') }}" alt="GitHub" class="github-icon">
+                github
+            </a>
+        </p>
     </div>
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>

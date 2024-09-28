@@ -13,6 +13,43 @@ body {
 
 h1 {
     font-weight: 300;
+    margin: 0; 
+}
+
+.caption {
+    font-size: 1.2em;
+    color: #ffffff;
+    font-style: italic; 
+    margin-top: 0; 
+    margin-bottom: 1em; 
+}
+
+.github-link {
+    margin-top: 2em; 
+}
+
+.github-link a {
+    color: #ffffff; 
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.github-link a:hover {
+    color: #808080; 
+    text-decoration: underline; 
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; 
+    transition: transform 0.3s ease;
+}
+
+.github-link a:hover .github-icon {
+    transform: scale(1.2); 
 }
 
 p a {
@@ -22,7 +59,7 @@ p a {
 }
 
 p a:hover {
-    color: gray;
+    color: #808080;
     text-decoration: underline;
 }
 
