@@ -31,16 +31,18 @@ h1 {
 
 .github-link a {
     color: #ffffff; 
-    text-decoration: none; 
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     transition: all 0.3s ease;
+    transform-origin: center; 
 }
 
 .github-link a:hover {
     color: #808080; 
-    text-decoration: underline; 
+    text-decoration: underline;
+    transform: scale(1.2); 
 }
 
 .github-icon {
