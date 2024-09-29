@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Blink for 2 seconds after typing is complete
             setTimeout(() => {
                 textElement.classList.add('hide-cursor');
-            }, 2000);
+            }, 4000);
         }
     }
 
