@@ -1,6 +1,6 @@
-// Function to create and animate a snowflake
+
+
 function createSnowflake() {
-    // Create a snowflake
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
     snowflake.textContent = '❄';
@@ -9,7 +9,6 @@ function createSnowflake() {
 
     document.body.appendChild(snowflake);
 
-    // Animate the snowflake
     let duration = Math.random() * 5 + 2;
     let sway = Math.random() * 100 - 50;
 
@@ -22,11 +21,31 @@ function createSnowflake() {
     });
 
     animation.onfinish = () => {
-        // Remove the snowflake from the DOM
         snowflake.remove();
     };
 }
 
-// Start the snowfall
 createSnowflake();
 setInterval(createSnowflake, 400);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const textElement = document.getElementById('typewriter-text');
+    const text = textElement.innerHTML;
+    textElement.innerHTML = '';
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            textElement.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100); // Adjust typing speed here
+        } else {
+            // Blink for 2 seconds after typing is complete
+            setTimeout(() => {
+                textElement.classList.add('hide-cursor');
+            }, 2000);
+        }
+    }
+
+    typeWriter();
+});
