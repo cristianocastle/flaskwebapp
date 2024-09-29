@@ -102,12 +102,12 @@ p a:hover {
 #typewriter-text::after {
     content: '|';
     animation: blink 1s infinite;
-    color: white; /* Adjust cursor color */
+    color: white; 
     margin-left: 2px;
 }
 
 .hide-cursor::after {
     content: '';
     animation: none;
-    display: none; /* Hide the cursor */
+    display: none; 
 }

@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (i < text.length) {
             textElement.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typeWriter, 100); // Adjust typing speed here
+            setTimeout(typeWriter, 100); 
         } else {
-            // Blink for 2 seconds after typing is complete
+            
             setTimeout(() => {
                 textElement.classList.add('hide-cursor');
             }, 4000);
